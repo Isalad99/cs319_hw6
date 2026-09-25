@@ -52,9 +52,9 @@ export default function App() {
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <div className="min-h-screen bg-slate-900 p-6 flex flex-col gap-6">
+    <div className="min-h-screen bg-white p-6 flex flex-col gap-6">
       <Header totalItems={totalItems} />
-      <div className="flex flex-col md:flex-row gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <ProductsList products={PRODUCTS} addToCart={addToCart} />
         <Cart
           cartItems={cartItems}
